@@ -1,10 +1,5 @@
 
 tasks = [
-  ("Bathing", "2024-07-01"),
-    ("Cooking", "2024-07-01"),
-    ("Eating", "2024-07-01"),
-    ("Buying soap", "2024-07-04"),
-    ("Reading Atomic Habits", "2024-07-05"),
 ]
 
 def add_task(name, due_date):
