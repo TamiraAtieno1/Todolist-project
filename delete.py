@@ -2,7 +2,7 @@ tasks = []
 
 # Function to list tasks
 def listTasks():
-    # Check if there are tasks in the lists
+    # Check if there are tasks in the list
     if len(tasks) == 0:
         print("No tasks found.")
     else:
@@ -18,8 +18,8 @@ def deleteTask():
         # Checks if the task number exists
         if 0 <= taskToDelete < len(tasks):
             # Removes tasks from the list
-            tasks.pop(taskToDelete)
-            print(f"Task {taskToDelete + 1} has been deleted.")
+            deleted_task = tasks.pop(taskToDelete)
+            print(f"Task '{deleted_task}' has been deleted.")
         else:
             print(f"Task {taskToDelete + 1} does not exist.")
     # Error handling
@@ -32,20 +32,6 @@ def deleteTask():
 
 if __name__ == "__main__":
     print("Welcome to my to-do list app:")
-
-    while True:
-        print("\n")
-        print("-------------------------")
-        print("1. Delete a task")
-        print("2. Exit")
-      
-        choice = input("Enter your choice: ")
-
-        # Call the appropriate function based on user choice
-        if choice == "1":
-            deleteTask()
-        elif choice == "2":
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
+    
+    # Call deleteTask() directly
+    deleteTask()
